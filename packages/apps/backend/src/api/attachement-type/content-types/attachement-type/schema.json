@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attachement_types",
+  "info": {
+    "singularName": "attachement-type",
+    "pluralName": "attachement-types",
+    "displayName": "AttachementType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

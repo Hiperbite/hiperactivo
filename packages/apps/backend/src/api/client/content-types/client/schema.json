@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 225,
+      "minLength": 7
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true,
+      "max": "9",
+      "min": "9",
+      "unique": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "private": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request.request",
+      "mappedBy": "client"
+    }
+  }
+}
