@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service-type",
     "pluralName": "service-types",
-    "displayName": "ServiceType"
+    "displayName": "ServiceType",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::request.request"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

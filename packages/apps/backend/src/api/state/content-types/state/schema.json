@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "states",
+  "info": {
+    "singularName": "state",
+    "pluralName": "states",
+    "displayName": "State",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "descriptions": {
+      "type": "text"
+    },
+    "stape": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::stape.stape",
+      "inversedBy": "states"
+    }
+  }
+}

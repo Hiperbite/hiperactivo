@@ -4,7 +4,8 @@
   "info": {
     "singularName": "attachement-type",
     "pluralName": "attachement-types",
-    "displayName": "AttachementType"
+    "displayName": "AttachementType",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,11 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "attachements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attachement.attachement"
     }
   }
 }

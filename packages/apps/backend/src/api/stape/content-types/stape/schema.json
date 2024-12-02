@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stapes",
+  "info": {
+    "singularName": "stape",
+    "pluralName": "stapes",
+    "displayName": "Stape",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "descriptions": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::request.request",
+      "inversedBy": "stapes"
+    },
+    "states": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::state.state",
+      "mappedBy": "stape"
+    }
+  }
+}

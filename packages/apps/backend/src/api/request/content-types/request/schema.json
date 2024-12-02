@@ -25,6 +25,12 @@
       "relation": "manyToOne",
       "target": "api::client.client",
       "inversedBy": "requests"
+    },
+    "stapes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::stape.stape",
+      "mappedBy": "request"
     }
   }
 }
